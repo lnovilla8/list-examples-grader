@@ -14,3 +14,14 @@ echo 'Finished cloning'
 
 # Then, add here code to compile and run, and do any post-processing of the
 # tests
+
+if ! [-f ListExamples.java]
+then
+  echo "Missing ListExamples.java in student submission"
+  echo "Score 0"
+  exit
+fi
+
+javac $CPATH *.java &> compile.txt
+if [$7 -ne 0]
+then
