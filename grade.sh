@@ -25,3 +25,6 @@ fi
 javac $CPATH *.java &> compile.txt
 if [$7 -ne 0]
 then
+  echo "Compilation error"
+  echo "Score: 0"
+  exit
